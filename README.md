@@ -1,2 +1,3 @@
-# CERTI_Test
+﻿# CERTI_Test
+
 CERTI - Teste técnico desenvolvedor de software.
