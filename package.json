@@ -1,0 +1,20 @@
+{
+    "name": "acert",
+    "version": "1.0.0",
+    "description": "Teste técnico Acert - Desenvovledor de software",
+    "private": false,
+    "scripts": {
+        "test": "node webservice/test",
+        "start": "NODE_ENV=production node server",
+        "server": "NODE_ENV=development node server"
+    },
+    "author": "Ivan Espínola Gomes - <ivan.espinola@live.com>",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "extenso": "^2.0.1"
+    },
+    "devDependencies": {}
+}
