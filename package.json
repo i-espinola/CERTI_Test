@@ -1,8 +1,8 @@
 {
   "name": "certi",
   "version": "1.0.0",
-  "description": "Teste tÃ©cnico Certi - Desenvolvedor de software",
-  "private": false,
+  "description": "Teste técnico CERTI - Desenvolvedor de software",
+  "private": true,
   "scripts": {
     "start": "node ./src/index",
     "clean": "rm -rf ./node_modules package-lock.json && npm i"
