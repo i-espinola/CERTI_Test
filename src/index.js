@@ -1,13 +1,12 @@
 // Requires modules
-const env = require("dotenv");
 const express = require("express");
 const bodyParser = require("body-parser");
 const webService = require("./API-core/core");
 
 // Server configs
 const app = express();
-const input = "/";
-const port = process.env.PORT || 8000;
+const input = "/:input";
+const port = 8000;
 
 app.use(bodyParser.json());
 

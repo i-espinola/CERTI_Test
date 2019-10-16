@@ -1,4 +1,4 @@
-# Group Acert
+# Group CERTI
 
 Teste técnico - desenvolvedor de software
 
@@ -7,7 +7,7 @@ Teste técnico - desenvolvedor de software
 * [x] Lingauem livre;
 * [x] Criar servidor HTTP para processar requisições GET;
 * [x] Saída das requisições GET deve ser formatada em JSON;
-* [x] Saída deve conter uma chave com a nomenclatura __extenso__, seguída pela versão por extenso do número(***inteiro***) recebido no path;
+* [x] Saída deve conter uma chave com a nomenclatura __extenso__, seguída pela versão por extenso do número(__inteiro__) recebido no path;
 * [x] números devem estar no intervalo [-99999, 99999].
 
 ### Exemplos

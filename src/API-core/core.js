@@ -10,8 +10,15 @@ function validation(input) {
     size: input.replace("-", "")
       .length <= 5 ? true : false
   }
-  const result = filter.min && filter.max && filter.nan && filter.finite && filter.size ? true : false;
-  return (result);
+
+  const result = !!(
+    filter.min &&
+    filter.max &&
+    filter.nan &&
+    filter.finite &&
+    filter.size
+  );
+  return result;
 }
 
 function startup(input) {
@@ -19,13 +26,13 @@ function startup(input) {
   const validate = validation(value);
 
   if (input === "check") {
-    return (runTest.check())
+    return true;
   } else if (validate) {
     const isZero = { extenso: "zero" };
     const runWebService = { extenso: toWords(value, { negative: "informal" }) };
     const output = value === "0" ? isZero : runWebService;
 
-    return (JSON.stringify(output));
+    return JSON.stringify(output);
   } else {
     const errorObj = {
       error: {
@@ -35,11 +42,10 @@ function startup(input) {
         details: "entre com um valor numérico entre -99999 até 99999"
       }
     };
-    return (JSON.stringify(errorObj));
+    return JSON.stringify(errorObj);
   }
 }
 
-
 module.exports = {
   startup: startup
-}
+};
