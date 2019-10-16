@@ -1,20 +1,22 @@
-﻿{
+{
   "name": "certi",
   "version": "1.0.0",
   "description": "Teste técnico Certi - Desenvolvedor de software",
   "private": false,
   "scripts": {
     "start": "node ./src/index",
-    "clean": "rm -rf ./node_modules && npm i"
+    "clean": "rm -rf ./node_modules package-lock.json && npm i"
   },
   "author": "Ivan Espínola Gomes - <ivan.espinola@live.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "extenso": "^2.0.1"
   },
   "devDependencies": {
-    "eslint": "^6.5.1"
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
