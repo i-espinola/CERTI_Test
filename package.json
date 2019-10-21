@@ -1,23 +1,29 @@
 {
   "name": "certi",
   "version": "1.0.0",
-  "description": "Teste técnico CERTI - Desenvolvedor de software",
+  "description": "Teste t�cnico CERTI - Desenvolvedor de software",
   "private": false,
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node ./src/index",
-    "dev": "nodemon ./src/index",
-    "clean": "rm -rf ./node_modules package-lock.json && npm i"
+    "_start": "node ./src/index",
+    "_dev": "nodemon ./src/index",
+    "clean": "rm -rf ./node_modules package-lock.json && npm i",
+    "watch": "babel -w src/ -d dist/",
+    "build": "babel src/ -d dist/",
+    "serve": "babel -w src/ -d dist/ | nodemon --watch dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ivan Espínola Gomes - <ivan.espinola@live.com>",
+  "author": "Ivan Esp�nola Gomes <ivan.espinola@live.com>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "nodemon": "^1.19.4"
   }
 }
