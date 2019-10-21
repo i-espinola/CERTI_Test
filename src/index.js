@@ -1,11 +1,11 @@
 // Requires modules
-const express = require('express');
-const bodyParser = require('body-parser');
-const extenso = require('./commonjs/white');
+import express from 'express';
+import { json } from 'body-parser';
+import extenso from './commonjs/white';
 const app = express();
 const server = {
   settings: {
-    banner: 'settings on',
+    banner: '\nServer up\n',
     input: '/:input',
     port: parseInt(process.env.PORT, 10) || 8000,
     host: process.env.HOST || 'localhost',
@@ -21,16 +21,16 @@ const server = {
   }
 };
 
-app.use(bodyParser.json());
+app.use(json());
 app.get(server.settings.input, (request, response) => {
   const output = isNaN(Number.parseInt(request.params.input))
     ? server.error
-    : server.apiRun(request.params.input)
+    : server.apiRun(request.params.input);
   response.status(200).send(output);
 });
 
 app.listen(server.settings.port, server.settings.host, function()
 {
-  console.info('settings on ');
+  console.info(`${server.settings.banner}`);
   console.info(`http://${server.settings.host}:${server.settings.port}`);
 });

@@ -17,7 +17,7 @@
   "scripts": {
     "_start": "node ./src/index",
     "_dev": "nodemon ./src/index",
-    "clean": "rm -rf ./node_modules package-lock.json && npm i",
+    "reset": "rm -rf ./node_modules ./dist package-lock.json && npm i",
     "watch": "babel -w src/ -d dist/",
     "build": "babel src/ -d dist/",
     "serve": "babel -w src/ -d dist/ | nodemon --watch dist",
