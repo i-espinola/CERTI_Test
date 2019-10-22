@@ -61,6 +61,7 @@ Para startar a aplicação em modo producão, execute o seguinte comando.
 ### Tempo
 
 - Horas codando: 5.4 hrs
+- Horas Totais: 9.1 hrs
 
 ### Metodologia
 
