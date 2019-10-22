@@ -44,7 +44,7 @@ Para fazer a instalação de todas as dependencias necessárias da aplicação, 
 
     npm audit fix && npm audit fix --force
 
-##### NPM - Construindo do projeto
+##### NPM - Construindo o projeto
 
     npm run build
 
