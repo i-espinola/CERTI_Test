@@ -6,9 +6,9 @@ Teste técnico - Desenvolvedor de software Junior
 
 **NOTA:**
 
-- Para executar os comandos abaixo, é imprescindível ter o Docker ou o gerenciador de dependencia NPM instalado globalmente em seu computador
+- Para executar os comandos abaixo, é imprescindível ter o **Docker** ou o gerenciador de dependencia **NPM** instalado globalmente em seu computador;
 
-- Esteja ciênte que ao executar os comandos é necessário estar no diretório raíz da aplicação para que tudo ocorra bem
+- Esteja ciênte que ao executar os comandos é necessário estar no diretório raíz da aplicação para que tudo ocorra como esperado.
 
 ### Uso local
 
@@ -16,7 +16,7 @@ Você pode optar em usar a aplicação com **Docker** ou com o gerenciador de de
 
 #### Com Docker
 
-Considerando que você já possui as _engines_ Docker em sua máquina local, execute os seguintes comandos no seu terminal
+Considerando que você já possui as _engines_ **Docker** em sua máquina local, execute os seguintes comandos no seu terminal
 
 ##### Docker - Criando a imagem do projeto
 
