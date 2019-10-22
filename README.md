@@ -78,7 +78,7 @@ Fiz um deploy do projeto no Heroku, o mesmo esta diponível para requisições G
 
 ### Tempo de desenvolvimento
 
-- Horas codando: 5.4 hrs
+- Horas codando: 6.1 hrs
 - Horas Totais: 9.1 hrs
 
 ### Metodologia
