@@ -1,10 +1,10 @@
 {
   "name": "certi",
   "version": "1.0.0",
-  "description": "Teste t�cnico CERTI - Desenvolvedor de software",
+  "description": "Teste tecnico CERTI - Desenvolvedor de software",
   "private": false,
   "main": "public/index.js",
-  "author": "Ivan Esp�nola Gomes <ivan.espinola@live.com>",
+  "author": "Ivan Espinola Gomes <ivan.espinola@live.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/i-espinola/CERTI_Test.git"
