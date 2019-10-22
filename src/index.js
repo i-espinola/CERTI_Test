@@ -37,7 +37,10 @@ app.get(setup.input, (request, response) => {
     response
       .status(200)
       .type(setup.headers.type)
-      .json({ extenso: extensoJs(request.params.input) })
+      .json({
+        // @ts-ignore
+        extenso: extensoJs(request.params.input, ({ negative: 'informal' }))
+      })
       .end()
   } else {
     response
