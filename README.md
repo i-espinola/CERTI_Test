@@ -62,7 +62,7 @@ Para startar a aplicação em modo producão, execute o seguinte comando.
 
 ### Acessando o projeto
 
-Depois de executar os comandos acima, abra [http://localhost:3000/123](http://localhost:3000/123) para receber a resposta em JSON da aplicação no seu browser preferido, ou com uma simples requisição GET no próprio terminal rode o comando `curl http://localhost:3000/123`.
+Depois de executar os comandos acima, abra [http://localhost:3000/123](http://localhost:3000/123) para receber a resposta em JSON da aplicação no seu browser preferido, ou com uma simples requisição GET no próprio terminal rodando o comando `curl http://localhost:3000/123`.
 
 ## Detalhes
 
