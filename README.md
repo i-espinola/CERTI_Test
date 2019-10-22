@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-﻿# CERTI_Test
-
-CERTI - Teste técnico desenvolvedor de software.
-=======
 # Group CERTI
 
 Teste técnico - Desenvolvedor de software Junior
@@ -147,4 +142,3 @@ Depois de executar os comandos acima, abra [http://localhost:3000/123](http://lo
 **Nota:**
 Em caso de dúvidas sobre o desafio, mande um email para ept@c**\*\***i.org.br e mzr@c**\*\***i.org.br;
 Prestamos atenção no review: edge cases e tratamento de erros, testes unitários, estruturação e qualidade do código, uso do git...
->>>>>>> develop
