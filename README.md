@@ -70,7 +70,7 @@ Depois de executar os comandos acima, abra [http://localhost:3000/123](http://lo
 
 ## Detalhes
 
-### Tempo
+### Tempo de desenvolvimento
 
 - Horas codando: 5.4 hrs
 - Horas Totais: 9.1 hrs
