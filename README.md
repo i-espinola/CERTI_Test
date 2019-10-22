@@ -4,7 +4,11 @@ Teste técnico - Desenvolvedor de software Junior
 
 ## Instalação/Execução do projeto
 
-**NOTA:** Para executar os comandos abaixo, é imprescindível ter o Docker ou o gerenciador de dependencia NPM instalado globalmente em seu computador, e nagevar para o diretório raíz da aplicação para que todos os comandos possam ser executados com sucesso.
+**NOTA:**
+
+- Para executar os comandos abaixo, é imprescindível ter o Docker ou o gerenciador de dependencia NPM instalado globalmente em seu computador
+
+- Esteja certo que ao executar os abaixo é necessário estar no diretório raíz da aplicação para que todos os comandos possam ser executados com sucesso
 
 ### Instalação local
 
