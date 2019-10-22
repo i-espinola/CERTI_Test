@@ -1,36 +1,54 @@
 // Requires modules
-import express from 'express';
-import { json } from 'body-parser';
-import extenso from './commonjs/white';
-const app = express();
-const server = {
-  settings: {
-    banner: '\nServer up\n',
-    input: '/:input',
-    port: parseInt(process.env.PORT, 10) || 8000,
-    host: process.env.HOST || 'localhost',
+const http = require('http')
+const path = require('path')
+const express = require('express')
+const favicon = require('serve-favicon')
+const bodyParser = require('body-parser')
+const extensoJs = require('./app/vendor/extenso')
+const validation = require('./app/validation').default
+
+// Server configs
+const setup = {
+  path: 'public/',
+  port: 8000,
+  input: '/:input',
+  method: 'GET',
+  headers: {
+    type: 'application/json'
   },
+  banner: '\nExpress server on\n',
+  favicon: 'public/favicon.ico',
   error: {
     code: 400,
-    status: 'Número/valor inválido',
-    details: 'entre com um valor numérico entre -99999 até 99999'
-  },
-  apiRun: function(input) {
-    // extenso(input, { negative: 'informal' })
-    return extenso(input)
+    status: 'Bad Request',
+    details: 'enter a numeric value between -99999 to 99999'
   }
-};
+}
 
-app.use(json());
-app.get(server.settings.input, (request, response) => {
-  const output = isNaN(Number.parseInt(request.params.input))
-    ? server.error
-    : server.apiRun(request.params.input);
-  response.status(200).send(output);
-});
+const app = express()
+app.set('port', process.env.PORT || setup.port)
+app.use(favicon(setup.favicon))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(path.join(setup.path)))
 
-app.listen(server.settings.port, server.settings.host, function()
-{
-  console.info(`${server.settings.banner}`);
-  console.info(`http://${server.settings.host}:${server.settings.port}`);
-});
+app.get(setup.input, (request, response) => {
+  if (validation(request.params.input)) {
+    response
+      .status(200)
+      .type(setup.headers.type)
+      .json({ extenso: extensoJs(request.params.input) })
+      .end()
+  } else {
+    response
+      .status(400)
+      .type(setup.headers.type)
+      .json({ error: setup.error })
+      .end()
+  }
+})
+
+const server = http.createServer(app)
+server.listen(app.get('port'), function () {
+  console.log(setup.banner)
+})

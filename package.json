@@ -1,10 +1,10 @@
 {
   "name": "certi",
   "version": "1.0.0",
-  "description": "Teste técnico CERTI - Desenvolvedor de software",
+  "description": "Teste tï¿½cnico CERTI - Desenvolvedor de software",
   "private": false,
-  "main": "dist/index.js",
-  "author": "Ivan Espínola Gomes <ivan.espinola@live.com>",
+  "main": "public/index.js",
+  "author": "Ivan Espï¿½nola Gomes <ivan.espinola@live.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/i-espinola/CERTI_Test.git"
@@ -17,10 +17,10 @@
   "scripts": {
     "_start": "node ./src/index",
     "_dev": "nodemon ./src/index",
-    "reset": "rm -rf ./node_modules ./dist package-lock.json && npm i",
-    "watch": "babel -w src/ -d dist/",
-    "build": "babel src/ -d dist/",
-    "serve": "babel -w src/ -d dist/ | nodemon --watch dist",
+    "reset": "rm -rf ./node_modules ./public package-lock.json && npm i",
+    "watch": "babel -w src/ -d public/",
+    "build": "babel src/ -d public/",
+    "serve": "babel -w src/ -d public/ | nodemon --watch public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -28,10 +28,19 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "nodemon": "^1.19.4"
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^1.19.4",
+    "typescript": "^3.6.4"
   }
 }

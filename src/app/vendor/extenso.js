@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*! Extenso.js v2.0.1 | MIT (c) 2015-2019 by Matheus Alves */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
