@@ -36,11 +36,11 @@ Considerando que você já possui o gerenciador de dependencia NPM instalado glo
 
 ##### NPM - Instalando as dependências
 
-Para fazer a instalação de todas as dependencias necessárias da aplicação, execute a seguinte linha de comando no terminal/console.
+Para fazer a instalação de todas as dependencias necessárias da aplicação, execute a seguinte linha de comando no terminal/console:
 
     npm i
 
-**Nota**: Se após a intalação você receber informações de vulnerabilidades nas dependencias instaladas, execute o seguinte comando para corrigir eventuais vulnerabilidades
+**Nota**: Se após a intalação você receber informações de vulnerabilidades nas dependencias instaladas, execute o seguinte comando para corrigir eventuais vulnerabilidades:
 
     npm audit fix && npm audit fix --force
 
@@ -58,7 +58,7 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
 
 ##### NPM - Modo produção
 
-Para startar a aplicação em modo producão, execute o seguinte comando:
+Para rodar a aplicação em modo producão, execute o seguinte comando:
 
     npm run start
 
