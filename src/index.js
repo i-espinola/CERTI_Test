@@ -7,6 +7,7 @@ const extensoJs = require('./app/vendor/extenso')
 const validation = require('./app/validation')
 
 // Server configs
+const app = express()
 const setup = {
   path: 'public/',
   port: 3000,
@@ -23,12 +24,10 @@ const setup = {
   }
 }
 
-const app = express()
 app.set('port', process.env.PORT || setup.port)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(setup.path)))
-
 app.get(setup.input, (request, response) => {
   if (validation.default(request.params.input)) {
     response
