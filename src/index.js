@@ -2,7 +2,6 @@
 const http = require('http')
 const path = require('path')
 const express = require('express')
-// const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const extensoJs = require('./app/vendor/extenso')
 const validation = require('./app/validation')
@@ -17,7 +16,6 @@ const setup = {
     type: 'application/json'
   },
   banner: '\nExpress server on\n',
-  // favicon: 'public/favicon.ico',
   error: {
     code: 400,
     status: 'Bad Request',
@@ -27,7 +25,6 @@ const setup = {
 
 const app = express()
 app.set('port', process.env.PORT || setup.port)
-// app.use(favicon(setup.favicon))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(setup.path)))
