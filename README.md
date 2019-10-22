@@ -22,11 +22,11 @@ Considerando que você já possui as _engines_ **Docker** em sua máquina local,
 
     docker-compose build
 
-##### Docker - Iniciar aplicação
+##### Docker - Iniciando a aplicação
 
     docker-compose up
 
-##### Docker - Encerrar aplicação
+##### Docker - Encerrando a aplicação
 
     docker-compose down
 
@@ -34,7 +34,7 @@ Considerando que você já possui as _engines_ **Docker** em sua máquina local,
 
 Considerando que você já possui o gerenciador de dependencia NPM instalado globalmente em seu computador, execute os seguintes comandos no seu terminal
 
-##### NPM - Instalando dependências
+##### NPM - Instalando as dependências
 
 Para fazer a instalação de todas as dependencias necessárias da aplicação, execute a seguinte linha de comando no terminal/console.
 
