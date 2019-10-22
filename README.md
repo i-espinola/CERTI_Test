@@ -10,29 +10,31 @@ Teste técnico - Desenvolvedor de software Junior
 
 - Esteja ciênte que ao executar os comandos é necessário estar no diretório raíz da aplicação para que tudo ocorra bem
 
-### Instalação local
+### Uso local
 
-Para executar esta aplicação localmente, você pode optar em usar o **Docker** ou o gerenciador de dependencia **NPM**.
+Você pode optar em usar a aplicação com **Docker** ou com o gerenciador de dependencia **NPM** do **Nodejs**
 
-#### Executando com Docker
+#### Com Docker
 
 Considerando que você já possui as _engines_ Docker em sua máquina local, execute os seguintes comandos no seu terminal
 
-##### Criando a imagem do projeto
+##### Docker - Criando a imagem do projeto
 
     docker-compose build
 
-##### Iniciar aplicação
+##### Docker - Iniciar aplicação
 
     docker-compose up
 
-##### Encerrar aplicação
+##### Docker - Encerrar aplicação
 
     docker-compose down
 
-#### Executando com Nodejs
+#### Com NPM
 
-##### Instalando dependências
+Considerando que você já possui o gerenciador de dependencia NPM instalado globalmente em seu computador, execute os seguintes comandos no seu terminal
+
+##### NPM - Instalando dependências
 
 Para fazer a instalação de todas as dependencias necessárias da aplicação, execute a seguinte linha de comando no terminal/console.
 
@@ -42,23 +44,25 @@ Para fazer a instalação de todas as dependencias necessárias da aplicação, 
 
     npm audit fix && npm audit fix --force
 
-##### Criar a build do projeto
+##### NPM - Construindo do projeto
 
     npm run build
 
-### Modo desenvolvimento
+##### NPM - Modo desenvolvimento
 
 Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento no terminal/console.
 
     npm run develop
 
-Depois de executar o comando acima, abra [http://localhost:3000/123](http://localhost:8000/123) para renderizar a saída JSON da aplicação no seu browser preferido, ou no próprio terminal rode o comando `curl http://localhost:3000/123`.
-
-### Modo produção
+##### NPM - Modo produção
 
 Para startar a aplicação em modo producão, execute o seguinte comando.
 
     npm run start
+
+### Acessando o projeto
+
+Depois de executar os comandos acima, abra [http://localhost:3000/123](http://localhost:3000/123) para receber a resposta em JSON da aplicação no seu browser preferido, ou com uma simples requisição GET no próprio terminal rode o comando `curl http://localhost:3000/123`.
 
 ## Detalhes
 
