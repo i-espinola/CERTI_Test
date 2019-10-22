@@ -2,7 +2,9 @@
 
 Teste técnico - Desenvolvedor de software Junior
 
-## Requisítos de desenvolvimento
+## Requisítos
+
+### Requisítos de desenvolvimento
 
 - [x] Lingauem livre;
 - [x] Criar servidor HTTP para processar requisições GET;
@@ -10,13 +12,13 @@ Teste técnico - Desenvolvedor de software Junior
 - [x] Saída deve conter uma chave com a nomenclatura **extenso**, seguída pela versão por extenso do número(**inteiro**) recebido no path;
 - [x] números devem estar no intervalo [-99999, 99999].
 
-### Exemplos
+#### Exemplos
 
     curl http://localhost:3000/1 -> { "extenso": "um" }
     curl http://localhost:3000/-1042 -> { "extenso": "menos mil e quarenta e dois" }
     curl http://localhost:3000/94587 -> { "extenso": "noventa e quatro mil e quinhentos e oitenta e sete" }
 
-## Requisítos de entrega
+### Requisítos de entrega
 
 - [x] Enviar o link do repositório no GitHub com o código em até sete dias úteis;
 - [x] Documentação no arquivo README.md;

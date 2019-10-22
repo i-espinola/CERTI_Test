@@ -1,15 +1,15 @@
 version: "3"
 services:
   api:
-    image: certi-test-dev-soft
+    image: certi-test-ivan
     build: .
     networks:
       - backend
     ports:
-      - "8000:8000"
+      - "3000:3000"
 
   web-cli:
-    image: certi-test-dev-soft
+    image: certi-test-ivan
     networks:
       - backend
     command: sh

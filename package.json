@@ -15,13 +15,11 @@
   "readme": "https://github.com/i-espinola/CERTI_Test#readme",
   "license": "MIT",
   "scripts": {
-    "_start": "node ./src/index",
-    "_dev": "nodemon ./src/index",
-    "reset": "rm -rf ./node_modules ./public package-lock.json && npm i",
+    "reset": "rm -rf ./node_modules npm-debug.log package-lock.json && npm i",
     "watch": "babel -w src/ -d public/",
     "build": "babel src/ -d public/",
-    "serve": "babel -w src/ -d public/ | nodemon --watch public",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "babel -w src/ -d public/ | nodemon --watch public",
+    "start": "babel src/ -d public/ && node ./public/index"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
