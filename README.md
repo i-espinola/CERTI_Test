@@ -8,7 +8,7 @@ Teste técnico - Desenvolvedor de software Junior
 
 - Para executar os comandos abaixo, é imprescindível ter o Docker ou o gerenciador de dependencia NPM instalado globalmente em seu computador
 
-- Esteja certo que ao executar os abaixo é necessário estar no diretório raíz da aplicação para que todos os comandos possam ser executados com sucesso
+- Esteja ciênte que ao executar os comandos é necessário estar no diretório raíz da aplicação para que tudo ocorra bem
 
 ### Instalação local
 
