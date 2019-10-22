@@ -135,7 +135,7 @@ Depois de executar os comandos acima, abra [http://localhost:3000/123](http://lo
 - [x] Enviar o link do repositório no GitHub com o código em até sete dias úteis;
 - [x] Documentação no arquivo README.md;
 - [x] Remover "e"s separando milhares, centenas e dezenas (vide exemplo): "noventa e quatro mil e quinhentos e oitenta e sete" (Esse não é o padrão da norma culta da língua portuguesa, e isso é intencional.);
-- [ ] O código deve implementar algoritmo de tradução.
+- [x] O código deve implementar algoritmo de tradução.
 
 **Bônus:** Crie um ambiente Docker para que possamos rodar seu servidor sem instalar dependências locais.
 
