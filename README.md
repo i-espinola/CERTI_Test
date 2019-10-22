@@ -46,23 +46,25 @@ Para fazer a instalação de todas as dependencias necessárias da aplicação, 
 
 ##### NPM - Construindo o projeto
 
+Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de construção no terminal/console:
+
     npm run build
 
 ##### NPM - Modo desenvolvimento
 
-Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento no terminal/console.
+Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento no terminal/console:
 
     npm run develop
 
 ##### NPM - Modo produção
 
-Para startar a aplicação em modo producão, execute o seguinte comando.
+Para startar a aplicação em modo producão, execute o seguinte comando:
 
     npm run start
 
 ### Acessando o projeto
 
-Depois de executar os comandos acima, abra [http://localhost:3000/123](http://localhost:3000/123) para receber a resposta em JSON da aplicação no seu browser preferido, ou com uma simples requisição GET no próprio terminal rodando o seguint comando
+Depois de executar os comandos acima, abra [http://localhost:3000/123](http://localhost:3000/123) para receber a resposta em JSON da aplicação no seu browser preferido, ou com uma simples requisição GET no próprio terminal rodando o seguint comando:
 
     curl http://localhost:3000/123
 
