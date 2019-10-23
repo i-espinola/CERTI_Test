@@ -15,15 +15,17 @@
   "readme": "https://github.com/i-espinola/CERTI_Test#readme",
   "license": "MIT",
   "scripts": {
-    "reset": "rm -rf ./node_modules npm-debug.log package-lock.json && npm i",
-    "watch": "babel -w src/ -d public/",
-    "build": "babel src/ -d public/",
-    "develop": "babel -w src/ -d public/ | nodemon --watch public",
-    "start": "babel src/ -d public/ && node ./public/index"
+    "reset": "rm -rf ./node_modules ./public/ ./npm-debug.log ./package-lock.json && npm i",
+    "watch": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d ./public/",
+    "build": "copyfiles -f ./src/*.ico ./public/ && babel ./src/ -d ./public/",
+    "develop": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d ./public/ | nodemon --watch ./public",
+    "start": "copyfiles -f ./src/*.ico ./public/ && babel ./src/ -d ./public/ && node ./public/index"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "copyfiles": "^2.1.1",
+    "express": "^4.17.1",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.5.0",

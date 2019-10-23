@@ -1,7 +1,9 @@
+// @ts-nocheck
 // Requires modules
 const http = require('http')
 const path = require('path')
 const express = require('express')
+const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const extensoJs = require('./app/vendor/extenso')
 const validation = require('./app/validation')
@@ -17,6 +19,7 @@ const setup = {
     type: 'application/json'
   },
   banner: '\nExpress server on\n',
+  favicon: 'public/favicon.ico',
   error: {
     code: 400,
     status: 'Bad Request',
@@ -25,6 +28,7 @@ const setup = {
 }
 
 app.set('port', process.env.PORT || setup.port)
+app.use(favicon(setup.favicon))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(setup.path)))
@@ -33,10 +37,7 @@ app.get(setup.input, (request, response) => {
     response
       .status(200)
       .type(setup.headers.type)
-      .json({
-        // @ts-ignore
-        extenso: extensoJs(request.params.input, ({ negative: 'informal' }))
-      })
+      .json({ extenso: extensoJs(request.params.input, ({ negative: 'informal' })) })
       .end()
   } else {
     response
