@@ -68,11 +68,11 @@ Depois de executar os comandos acima, abra [http://localhost:3000/123](http://lo
 
     curl http://localhost:3000/123
 
-<!-- #### Heroku deploy
+#### Heroku deploy
 
 Fiz um deploy do projeto no Heroku, o mesmo esta diponível para requisições GET no seguinte link:
 
-[https://to-extenso.herokuapp.com/123](https://to-extenso.herokuapp.com/123) -->
+[https://certi-teste.herokuapp.com/123](https://certi-teste.herokuapp.com/123)
 
 ## Detalhes
 
