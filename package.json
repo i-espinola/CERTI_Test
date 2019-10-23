@@ -16,10 +16,10 @@
   "license": "MIT",
   "scripts": {
     "reset": "del -rf ./node_modules/ ./public/ ./npm-debug.log ./package-lock.json && npm i",
-    "watch": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d ./public/",
-    "build": "copyfiles -f ./src/*.ico ./public/ && babel ./src/ -d ./public/",
-    "develop": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d p./ublic/ | nodemon --watch ./public/",
-    "start": "copyfiles -f ./src/*.ico ./public/ && babel ./src/ -d ./public/ && node ./public/index"
+    "watch": "babel -w ./src/ -d ./public/",
+    "build": "babel ./src/ -d ./public/",
+    "develop": "babel -w ./src/ -d p./ublic/ | nodemon --watch ./public/",
+    "start": "babel ./src/ -d ./public/ && node ./public/index"
   },
   "dependencies": {
     "babel": "^6.23.0",
