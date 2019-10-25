@@ -9,15 +9,13 @@ export default (input) => {
     min: value >= -99999,
     max: value <= 99999,
     nan: !Number.isNaN(value),
-    finite: Number.isFinite(value),
-    size: input.replace('-', '').length <= 5
+    finite: Number.isFinite(value)
   }
   const result = (
     filter.min &&
     filter.max &&
     filter.nan &&
-    filter.finite &&
-    filter.size
+    filter.finite
   )
   return result
 }

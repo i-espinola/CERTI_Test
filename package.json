@@ -15,7 +15,7 @@
   "readme": "https://github.com/i-espinola/CERTI_Test#readme",
   "license": "MIT",
   "scripts": {
-    "reset": "del -rf ./node_modules/ ./public/ ./npm-debug.log ./package-lock.json && npm i",
+    "reset": "del ./node_modules/ ./public/ ./npm-debug.log ./package-lock.json && npm i",
     "watch": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d ./public/",
     "build": "copyfiles -f ./src/*.ico ./public/ && babel ./src/ -d ./public/",
     "develop": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d p./ublic/ | nodemon --watch ./public/",
