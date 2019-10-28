@@ -1,0 +1,52 @@
+export const words = {
+  and: ' e ',
+  numbers: [
+    ['zero'],
+    [
+      '',
+      'um',
+      'dois',
+      'três',
+      'quatro',
+      'cinco',
+      'seis',
+      'sete',
+      'oito',
+      'nove',
+      'dez',
+      'onze',
+      'doze',
+      'treze',
+      'quatorze',
+      'quinze',
+      'dezesseis',
+      'dezessete',
+      'dezoito',
+      'dezenove'
+    ],
+    [
+      'dez',
+      'vinte',
+      'trinta',
+      'quarenta',
+      'cinqüenta',
+      'sessenta',
+      'setenta',
+      'oitenta',
+      'noventa'
+    ],
+    [
+      'cem',
+      'cento',
+      'duzentos',
+      'trezentos',
+      'quatrocentos',
+      'quinhentos',
+      'seiscentos',
+      'setecentos',
+      'oitocentos',
+      'novecentos'
+    ],
+    ['mil']
+  ]
+}
