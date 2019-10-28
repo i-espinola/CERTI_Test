@@ -16,9 +16,9 @@
   "license": "MIT",
   "scripts": {
     "reset": "del ./node_modules/ ./public/ ./npm-debug.log ./package-lock.json && npm i",
-    "watch": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d ./public/",
-    "build": "copyfiles -f ./src/*.ico ./public/ && babel ./src/ -d ./public/",
-    "develop": "copyfiles -f ./src/*.ico ./public/ && babel -w ./src/ -d ./public/ | nodemon --watch ./public/",
+    "watch": "copyfiles -f ./src/*.ico ./public/ && babel ./src --out-dir ./public/ --source-maps --watch",
+    "build": "del ./public/ && copyfiles -f ./src/*.ico ./public/ && babel ./src/ --source-maps -d ./public/",
+    "develop": "copyfiles -f ./src/*.ico ./public/ && babel ./src --out-dir ./public/ --source-maps --watch | nodemon --watch ./public/",
     "start": "copyfiles -f ./src/*.ico ./public/ && babel ./src/ -d ./public/ && node ./public/index"
   },
   "dependencies": {
@@ -33,15 +33,12 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.5.0",
-    "@typescript-eslint/parser": "^2.5.0",
     "eslint": "^6.5.1",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "nodemon": "^1.19.4",
-    "typescript": "^3.6.4"
+    "nodemon": "^1.19.4"
   }
 }

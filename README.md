@@ -147,4 +147,4 @@ Fiz um deploy do projeto no Heroku, o mesmo esta diponível para requisições G
 
 **Nota:**
 Em caso de dúvidas sobre o desafio, mande um email para ept@c**\*\***i.org.br e mzr@c**\*\***i.org.br;
-Prestamos atenção no review: edge cases e tratamento de erros, testes unitários, estruturação e qualidade do código, uso do git...
+Prestamos atenção no review: edge cases e tratamento de erros, testes unitários, estruturação, qualidade do código e uso do git.
