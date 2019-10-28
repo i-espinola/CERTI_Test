@@ -18,7 +18,6 @@ export default class ExtensoJs {
 
   validation () {
     const value = Number(this.input)
-    // const value = Number(this.input)
     const filter = {
       min: value >= -99999,
       max: value <= 99999,

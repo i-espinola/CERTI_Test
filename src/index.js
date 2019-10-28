@@ -11,7 +11,7 @@ import ExtensoJs from './app/core'
 const app = express()
 const setup = {
   path: 'public/',
-  port: 3000,
+  port: process.env.PORT || 3000,
   input: '/:input',
   method: 'GET',
   headers: {
@@ -19,10 +19,8 @@ const setup = {
   },
   banner: '\nExpress server on\n',
   favicon: 'public/favicon.ico'
+};
 
-}
-
-app.set('port', process.env.PORT || setup.port)
 app.use(favicon(setup.favicon))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
