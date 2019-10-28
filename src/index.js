@@ -19,7 +19,7 @@ const setup = {
   },
   banner: '\nExpress server on\n',
   favicon: 'public/favicon.ico'
-};
+}
 
 app.use(favicon(setup.favicon))
 app.use(bodyParser.json())
