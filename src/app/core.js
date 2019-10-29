@@ -1,6 +1,5 @@
 'use strict'
 
-import { words } from './words'
 import { dicionary } from './dicionary'
 
 export default class WhiteExtenso {
@@ -64,5 +63,9 @@ export default class WhiteExtenso {
 
     const output = { extenso: white.join() }
     return output
+  }
+
+  format () { 
+    
   }
 }
