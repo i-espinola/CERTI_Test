@@ -1,7 +1,9 @@
 export const words = {
   and: ' e ',
   numbers: [
-    ['zero'],
+    [
+      'zero'
+    ],
     [
       '',
       'um',
@@ -12,7 +14,19 @@ export const words = {
       'seis',
       'sete',
       'oito',
-      'nove',
+      'nove'
+    ],
+    [
+      '',
+      'dez',
+      'vinte',
+      'trinta',
+      'quarenta',
+      'cinqüenta',
+      'sessenta',
+      'setenta',
+      'oitenta',
+      'noventa',
       'dez',
       'onze',
       'doze',
@@ -23,17 +37,6 @@ export const words = {
       'dezessete',
       'dezoito',
       'dezenove'
-    ],
-    [
-      'dez',
-      'vinte',
-      'trinta',
-      'quarenta',
-      'cinqüenta',
-      'sessenta',
-      'setenta',
-      'oitenta',
-      'noventa'
     ],
     [
       'cem',
@@ -47,6 +50,9 @@ export const words = {
       'oitocentos',
       'novecentos'
     ],
-    ['mil']
+    [
+      '',
+      'mil'
+    ]
   ]
 }
