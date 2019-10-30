@@ -8,6 +8,7 @@ import favicon from 'serve-favicon'
 import bodyParser from 'body-parser'
 import WhiteExtenso from './app/core'
 
+// Server instance and settings
 const app = express()
 const setup = {
   path: 'public/',
@@ -27,21 +28,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(setup.path)))
 app.get(setup.input, (request, response) => {
   const extensoCore = new WhiteExtenso(request.params.input)
-  if (extensoCore.validation()) {
-    response
-      .status(200)
-      .type(setup.headers.type)
-      .json(extensoCore.white())
-      .end()
-  } else {
-    response
-      .status(400)
-      .type(setup.headers.type)
-      .json(extensoCore.invalid())
-      .end()
-  }
+  const statusCode = extensoCore.validation() ? 200 : 400
+  response
+    .status(statusCode)
+    .type(setup.headers.type)
+    .json(extensoCore.start())
+    .end()
 })
 
+// Start Serve
 const server = http.createServer(app)
 server.listen(setup.port, () => {
   console.log(setup.banner)

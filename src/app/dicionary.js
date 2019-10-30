@@ -1,9 +1,7 @@
-export const dicionary = {
-  and: ' e ',
+﻿export const dicionary = {
+  negative: 'menos',
   numbers: {
-    0: [
-      'zero'
-    ],
+    0: 'zero',
     1: [
       'um',
       'dez',
@@ -50,7 +48,7 @@ export const dicionary = {
       'noventa',
       'novecentos'
     ],
-    10: [null],
+    10: [''],
     11: ['onze'],
     12: ['doze'],
     13: ['treze'],

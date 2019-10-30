@@ -8,15 +8,18 @@ export default class WhiteExtenso {
   */
   constructor (input) {
     this.input = input
+    this.output = undefined
+    this.isNegative = undefined
   }
 
   validation () {
-    const value = Number(this.input)
+    this.isNegative = this.input.includes('-')
+    const input = Number(this.input)
     const filter = {
-      min: value >= -99999,
-      max: value <= 99999,
-      nan: !Number.isNaN(value),
-      finite: Number.isFinite(value)
+      min: input >= -99999,
+      max: input <= 99999,
+      nan: !Number.isNaN(input),
+      finite: Number.isFinite(input)
     }
     const result =
       filter.min &&
@@ -36,36 +39,58 @@ export default class WhiteExtenso {
     })
   }
 
-  white () {
-    const total = Number(this.input)
-    const array = this.input.split('')
-    const white = []
-    let length = array.length
+  format () {
+    if (this.isNegative) this.output.splice(0, 0, dicionary.negative)
+    this.output = this.output.join().replace(/,/gi, ' e ').replace(/e mil/, 'mil')
+    this.output = { extenso: this.output }
+  }
 
-    if (total > 0) {
+  white () {
+    const array = this.input.replace(/-/g, '').split('')
+    this.input = Number(this.input.replace(/[^\d]+/g, ''))
+    let length = array.length
+    const white = []
+
+    if (this.input) {
       while (length > 0) {
         length--
-        const number = Number(array.shift())
-        if (!number || isNaN(number)) continue
-        const elevenUntilNineteen = (length === 1 || length === 4) && (number === 1) && (Number(array[0])) ? Number(number + array.shift()) : 0
-        const hundred = (((number === 1) && (array.join('') === '00')))
+        let number = Number(array.shift())
+        if (!number) continue
 
-        if (elevenUntilNineteen) {
-          white.push(dicionary.numbers[elevenUntilNineteen])
+        const xiIxx = ((length === 1 || length === 4) && (number === 1) && (Number(array[0]) > 0))
+        const c = (number === 1 && length === 2 && !Number(array.join('')))
+        const cc = length <= 2
+        const m = length === 3
+
+        if (xiIxx) {
+          const elevenUntilNineteen = Number(number + array.shift())
+          length === 1
+            ? white.push(dicionary.numbers[elevenUntilNineteen])
+            : white.push(dicionary.numbers[elevenUntilNineteen]) && white.push(dicionary.numbers.thousand)
           length--
           continue
-        } else if (hundred) white.push(dicionary.numbers.hundred)
-        else if (length === 4) ((white.push(dicionary.numbers[number][1])) && (white.push(dicionary.numbers.thousand)))
-        else if (length === 3) ((white.push(dicionary.numbers[number][0])) && (white.push(dicionary.numbers.thousand)))
-        else (white.push(dicionary.numbers[number][length]))
+        } else if (c) white.push(dicionary.numbers.hundred)
+        else if (cc) white.push(dicionary.numbers[number][length])
+        else if (m) {
+          number === 1
+            ? white.push(dicionary.numbers.thousand)
+            : white.push(dicionary.numbers[number][0]) && white.push(dicionary.numbers.thousand)
+        } else {
+          white.push(dicionary.numbers[number][1])
+          if (number >= 2 && Number(array[0])) {
+            number = Number(array.shift())
+            white.push(dicionary.numbers[number][0])
+            white.push(dicionary.numbers.thousand)
+            length--
+          } else white.push(dicionary.numbers.thousand)
+        }
       }
-    } else (white.push(dicionary.numbers[total][total]))
+    } else (white.push(dicionary.numbers[0]))
 
-    const output = { extenso: white.join() }
-    return output
+    this.output = white
+    this.format()
+    return (this.output)
   }
 
-  format () { 
-    
-  }
+  start () { return (this.validation() ? this.white() : this.invalid()) }
 }
