@@ -100,23 +100,30 @@ Fiz um deploy do projeto no Heroku, o mesmo esta diponível para requisições G
 ### Estrutura de arquivos
 
     CERTI_Test/
+    ├── .babelrc
     ├── docker-compose.yml
     ├── Dockerfile
+    ├── .dockerignore
+    ├── .eslintignore
+    ├── .eslintrc.json
+    ├── .gitignore
     ├── LICENSE
     ├── metodologia.png
     ├── package.json
     ├── public
     │   ├── app
-    │   │   ├── validation.js
-    │   │   └── vendor
-    │   │       └── extenso.js
-    │   └── index.js
+    │   │ ├── core.js
+    │   │ ├── core.js.map
+    │   │ ├── dicionary.js
+    │   │ └── dicionary.js.map
+    │   ├── favicon.ico
+    │   ├── index.js
+    │   └── index.js.map
     ├── README.md
     └── src
         ├── app
-        │   ├── validation.js
-        │   └── vendor
-        │       └── extenso.js
+        │ ├── core.js
+        │ └── dicionary.js
         ├── favicon.ico
         └── index.js
 
