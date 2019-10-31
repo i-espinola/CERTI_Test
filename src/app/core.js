@@ -40,9 +40,14 @@ export default class WhiteExtenso {
   }
 
   format () {
-    if (this.isNegative) this.output.splice(0, 0, dicionary.negative)
-    this.output = this.output.join().replace(/,/gi, ' e ').replace(/e mil/, 'mil')
-    this.output = { extenso: this.output }
+    let formatting = this.output
+    if (this.isNegative) formatting.splice(0, 0, dicionary.negative)
+    formatting = formatting
+      .join()
+      .replace(/,/gi, ' ' + dicionary.and + ' ')
+      .replace(dicionary.and + ' ' + dicionary.numbers.thousand, dicionary.numbers.thousand)
+    if (formatting.includes(dicionary.negative + ' ' + dicionary.and)) formatting = formatting.replace(dicionary.negative + ' ' + dicionary.and, dicionary.negative)
+    this.output = { extenso: formatting }
   }
 
   white () {

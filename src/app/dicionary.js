@@ -1,5 +1,6 @@
 ﻿export const dicionary = {
   negative: 'menos',
+  and: 'e',
   numbers: {
     0: 'zero',
     1: [
