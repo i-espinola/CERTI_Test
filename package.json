@@ -1,5 +1,5 @@
 {
-	"name": "system-write-numbers-api-backend",
+	"name": "system-write-number-api",
 	"version": "1.0.0",
 	"description": "API que escreve valores numéricos por extenso",
 	"private": false,
@@ -7,12 +7,12 @@
 	"author": "Ivan Espinola Gomes <ivan.espinola@live.com>",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/i-espinola/system-write-numbers-api-backend.git"
+		"url": "git+https://github.com/i-espinola/system-write-number-api.git"
 	},
 	"bugs": {
-		"url": "https://github.com/i-espinola/system-write-numbers-api-backend/issues"
+		"url": "https://github.com/i-espinola/system-write-number-api/issues"
 	},
-	"readme": "https://github.com/i-espinola/system-write-numbers-api-backend#readme",
+	"readme": "https://github.com/i-espinola/system-write-number-api#readme",
 	"license": "MIT",
 	"scripts": {
 		"clean": "del public npm-debug.log package-lock.json",
