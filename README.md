@@ -1,6 +1,6 @@
-# Group CERTI
+# API write number
 
-Teste técnico - Desenvolvedor de software Junior
+API que escreve valores numéricos por extenso
 
 ## Instalação/Execução do projeto
 
