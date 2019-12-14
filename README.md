@@ -68,12 +68,6 @@ Depois de executar os comandos acima, abra [http://localhost:3000/123](http://lo
 
     curl http://localhost:3000/123
 
-#### Heroku deploy
-
-Fiz um deploy do projeto no Heroku, o mesmo esta diponível para requisições GET no seguinte link:
-
-[https://certi-teste.herokuapp.com/123](https://certi-teste.herokuapp.com/123)
-
 ## Detalhes
 
 ### Tempo de desenvolvimento
@@ -99,7 +93,7 @@ Fiz um deploy do projeto no Heroku, o mesmo esta diponível para requisições G
 
 ### Estrutura de arquivos
 
-    CERTI_Test/
+    system-write-number-api/
     ├── .babelrc
     ├── docker-compose.yml
     ├── Dockerfile
@@ -126,32 +120,3 @@ Fiz um deploy do projeto no Heroku, o mesmo esta diponível para requisições G
         │ └── dicionary.js
         ├── favicon.ico
         └── index.js
-
-## Requisítos CERTI
-
-### Requisítos de desenvolvimento
-
-- [x] Lingauem livre;
-- [x] Criar servidor HTTP para processar requisições GET;
-- [x] Saída das requisições GET deve ser formatada em JSON;
-- [x] Saída deve conter uma chave com a nomenclatura **extenso**, seguída pela versão por extenso do número(**inteiro**) recebido no path;
-- [x] números devem estar no intervalo [-99999, 99999].
-
-#### Exemplos
-
-    curl http://localhost:3000/1 -> { "extenso": "um" }
-    curl http://localhost:3000/-1042 -> { "extenso": "menos mil e quarenta e dois" }
-    curl http://localhost:3000/94587 -> { "extenso": "noventa e quatro mil e quinhentos e oitenta e sete" }
-
-### Requisítos de entrega
-
-- [x] Enviar o link do repositório no GitHub com o código em até sete dias úteis;
-- [x] Documentação no arquivo README.md;
-- [x] Remover "e"s separando milhares, centenas e dezenas (vide exemplo): "noventa e quatro mil e quinhentos e oitenta e sete" (Esse não é o padrão da norma culta da língua portuguesa, e isso é intencional.);
-- [x] O código deve implementar algoritmo de tradução.
-
-**Bônus:** Crie um ambiente Docker para que possamos rodar seu servidor sem instalar dependências locais.
-
-**Nota:**
-Em caso de dúvidas sobre o desafio, mande um email para ept@c**\*\***i.org.br e mzr@c**\*\***i.org.br;
-Prestamos atenção no review: edge cases e tratamento de erros, testes unitários, estruturação, qualidade do código e uso do git.
